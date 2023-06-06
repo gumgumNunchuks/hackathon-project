@@ -10,3 +10,4 @@ router.get("/get/:id/completed",controllers.completeTrip)
 
 router.post("/createtrip",controllers.createTrip)
 
+export default router

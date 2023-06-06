@@ -23,11 +23,6 @@ const Trip = sequelize.define('Trip', {
     type: DataTypes.DATE,
     allowNull: false,
   },
-  places: {
-    type: DataTypes.ARRAY(DataTypes.STRING),
-    allowNull: true,
-    defaultValue: [], 
-  },
   status: {
     type: DataTypes.ENUM('incomplete', 'completed'),
     allowNull: false,
@@ -35,13 +30,8 @@ const Trip = sequelize.define('Trip', {
   },
 });
 
-// Define associations
-Trip.belongsToMany(User, { through: 'UserTrip' });
-Trip.belongsToMany(Destination, { through: 'TripDestination' });
-
 // Sync the model with the database
 Trip.sync();
 
 // Export the Trip model
-
 export default Trip

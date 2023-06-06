@@ -36,11 +36,8 @@ const Destination = sequelize.define('Destination', {
   },
 });
 
-Destination.belongsToMany(Trip, { through: 'TripDestination' });
-
 // Sync the model with the database
 Destination.sync();
 
 // Export the Destination model
-
 export default Destination

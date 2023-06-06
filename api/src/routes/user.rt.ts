@@ -15,5 +15,4 @@ router.get('/get/email/:email', controllers.getUserByMail)
 
 router.post('/update', controllers.updateUser)
 
-module.exports = router
-
+export default router

@@ -7,7 +7,6 @@ const SECRETKEY = process.env.SECRET_KEY;
 
 /**
  * Signing up the user
-<<<<<<< HEAD
 **/
 export async function signup(req: any, res: any) {
     const email = req.body.email;
@@ -29,9 +28,8 @@ export async function signup(req: any, res: any) {
         email: email,
         password: secPass,
         name: name,
-
-
     })
+
     const id = user.getDataValue('id');
     const payload = {
         id: user.getDataValue('id')
